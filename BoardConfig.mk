@@ -105,8 +105,8 @@ TARGET_BOARD_PLATFORM := lito
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 
-# Inherit from proprietary files
-include vendor/xiaomi/gauguin/BoardConfigVendor.mk
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -119,3 +119,6 @@ BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+
+# Inherit from proprietary files
+include vendor/xiaomi/gauguin/BoardConfigVendor.mk
