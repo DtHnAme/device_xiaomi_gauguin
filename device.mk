@@ -17,6 +17,10 @@
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/gauguin/cepheus-vendor.mk)
 
+# Partitions
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
