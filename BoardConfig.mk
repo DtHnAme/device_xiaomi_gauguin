@@ -17,3 +17,6 @@
 BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/gauguin
+
+# Inherit from proprietary files
+include vendor/xiaomi/gauguin/BoardConfigVendor.mk

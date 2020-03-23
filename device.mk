@@ -13,3 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# Call the proprietary setup
+$(call inherit-product, vendor/xiaomi/gauguin/cepheus-vendor.mk)
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
