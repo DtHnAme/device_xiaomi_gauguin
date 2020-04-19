@@ -20,6 +20,7 @@ ro.charger.enable_suspend=true
 
 # Graphics
 debug.hwui.renderer=skiavk
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Hax
 ro.control_privapp_permissions=log
