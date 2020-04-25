@@ -17,6 +17,9 @@ ro.sf.blurs_are_expensive=1
 # Charger Mode
 ro.charger.enable_suspend=true
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # Graphics
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 vendor.display.disable_rotator_downscale=1
