@@ -25,6 +25,7 @@ import android.provider.Settings;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.utils.RefreshRateUtils;
 import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -35,19 +36,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private ITouchFeature mTouchFeature;
     @Override
     public void onReceive(final Context context, Intent intent) {
-     try {
-            // We need to reset this setting to trigger an update in display service
-            final float refreshRate = Settings.System.getFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, 90.0f);
-            Thread.sleep(500);
-            Settings.System.putFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, 90.0f);
-            Thread.sleep(500);
-            Settings.System.putFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, refreshRate);
-        } catch (Exception e) {
-            // Ignore
-        }
+        // Refresh rate
+        RefreshRateUtils.setFPS(RefreshRateUtils.getRefreshRate(context));
 
         //Micro-Service to restore sata of dt2w on reboot
         SharedPreferences prefs = context.getSharedPreferences(SHAREDD2TW, Context.MODE_PRIVATE); 
@@ -58,7 +48,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             // Do nothing
         }
 
-    
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DozeUtils.checkDozeService(context);
         FodUtils.startService(context);

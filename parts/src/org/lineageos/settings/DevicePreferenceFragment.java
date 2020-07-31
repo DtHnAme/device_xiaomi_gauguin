@@ -16,34 +16,30 @@
 
 package org.lineageos.settings;
 
-import android.content.om.IOverlayManager;
-import android.content.om.OverlayInfo;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.provider.Settings;
 import android.widget.Toast;
-import androidx.preference.PreferenceFragment;
-import androidx.preference.Preference;
+
 import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
+import org.lineageos.settings.utils.RefreshRateUtils;
 
 public class DevicePreferenceFragment extends PreferenceFragment {
 
     private static final String KEY_MIN_REFRESH_RATE = "pref_min_refresh_rate";
-   
-
-    private IOverlayManager mOverlayService;
 
     private ListPreference mPrefMinRefreshRate;
     private SwitchPreference mPrefPillStyleNotch;
+
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
-        mOverlayService = IOverlayManager.Stub.asInterface(ServiceManager.getService("overlay"));
     }
 
     @Override
@@ -56,30 +52,23 @@ public class DevicePreferenceFragment extends PreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        updateValuesAndSummaries();
+        mPrefMinRefreshRate.setValueIndex(RefreshRateUtils.getRefreshRate(getActivity()));
+        mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getEntry());
     }
 
-    private void updateValuesAndSummaries() {
-        final float refreshRate = Settings.System.getFloat(getContext().getContentResolver(),
-            Settings.System.MIN_REFRESH_RATE, 120.0f);
-        mPrefMinRefreshRate.setValue(((int) refreshRate) + " Hz");
-        mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getValue());
+    private final Preference.OnPreferenceChangeListener PrefListener =
+            new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object value) {
+                    final String key = preference.getKey();
 
-    }
-
-    private Preference.OnPreferenceChangeListener PrefListener =
-        new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object value) {
-                final String key = preference.getKey();
-
-                if (KEY_MIN_REFRESH_RATE.equals(key)) {
-                    Settings.System.putFloat(getContext().getContentResolver(),
-                        Settings.System.MIN_REFRESH_RATE,
-                        (float) Integer.parseInt((String) value));
-                } 
-                updateValuesAndSummaries();
-                return true;
-            }
-        };
+                    if (KEY_MIN_REFRESH_RATE.equals(key)) {
+                        RefreshRateUtils.setRefreshRate(getActivity(), Integer.parseInt((String) value));
+                        RefreshRateUtils.setFPS(Integer.parseInt((String) value));
+                        mPrefMinRefreshRate.setValueIndex(Integer.parseInt((String) value));
+                        mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getEntry());
+                    }
+                    return true;
+                }
+            };
 }
