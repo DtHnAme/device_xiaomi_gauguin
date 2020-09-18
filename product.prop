@@ -10,6 +10,9 @@ audio.sys.offload.pstimeout.secs=3
 ro.af.client_heap_size_kbyte=7168
 media.stagefright.audio.deep=false
 
+# Blurs
+ro.surface_flinger.supports_background_blur=1
+
 # Charger Mode
 ro.charger.enable_suspend=true
 
