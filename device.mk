@@ -134,6 +134,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
+    WifiResCommon \
     FrameworksResTarget 
     
 # OTA
@@ -203,6 +204,10 @@ PRODUCT_PACKAGES += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
+
+# WiFi
+PRODUCT_PACKAGES += \
+    WifiOverlay
 
 # WiFi Display
 PRODUCT_PACKAGES += \
