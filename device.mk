@@ -38,7 +38,8 @@ PRODUCT_PACKAGES += \
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService
+    AntHalService-Soong \
+    com.dsi.ant.antradio_library
 
 # Audio
 PRODUCT_PACKAGES += \
