@@ -4,6 +4,9 @@ service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservic
     user system
     group system input wakelock
 
+on property:ro.boot.hwc=*
+    setprop vendor.boot.hwc ${ro.boot.hwc}
+
 on property:init.svc.cnss_diag=running
     stop cnss_diag
 
