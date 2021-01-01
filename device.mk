@@ -83,11 +83,12 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig \
-    libqdMetaData \
-    libqdMetaData.system \
+    libdisplayconfig.qti \
+    libgralloc.qti \
     libvulkan \
-    vendor.display.config@1.0
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0 \
+    vendor.qti.hardware.display.composer@3.0
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -224,6 +225,8 @@ PRODUCT_PACKAGES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
+    libqdMetaData \
+    libqdMetaData.system \
     libnl
 
 PRODUCT_BUILD_SUPER_PARTITION := false
