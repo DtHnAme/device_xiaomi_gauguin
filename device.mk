@@ -69,7 +69,11 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap
-    
+
+# Configstore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
