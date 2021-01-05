@@ -92,12 +92,20 @@ PRODUCT_PACKAGES += \
     libgralloc.qti \
     libvulkan \
     vendor.display.config@1.0 \
+    vendor.display.config@1.2 \
+    vendor.display.config@1.3 \
+    vendor.display.config@1.5 \
     vendor.display.config@2.0 \
     vendor.qti.hardware.display.composer@3.0
 
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1 \
+    vendor.xiaomi.hardware.fingerprintextension@1.0
 
 # FM
 PRODUCT_PACKAGES += \
@@ -107,11 +115,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.manager@1.0 \
-    libhidltransport \
-    libhwbinder
-    
+    android.hidl.base@1.0
+
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
@@ -177,8 +182,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml
 
-
-    
 # PowerStats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats@1.0-service.mock
@@ -209,6 +212,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # Telephony
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.secure_element@1.0 \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
@@ -223,6 +229,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
+
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.systemhelper@1.0
 
 # Thermal
 PRODUCT_PACKAGES += \
