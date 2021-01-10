@@ -10,8 +10,6 @@ ro.miui.                       u:object_r:exported_system_prop:s0
 ro.product.mod_device          u:object_r:exported2_default_prop:s0
 ro.product.system.manufacturer u:object_r:exported2_default_prop:s0 exact string
 
-net.dns                 u:object_r:net_dns_prop:s0
-
 persist.sensor.                u:object_r:sensors_prop:s0
 
 persist.rild.nitz_         u:object_r:vendor_default_prop:s0
