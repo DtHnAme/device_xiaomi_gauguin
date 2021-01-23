@@ -198,6 +198,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml
 
 # Power
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_SYSTEM)/etc/powerhint.json
+
 PRODUCT_PACKAGES += \
     android.hardware.power-service.gauguin-libperfmgr
 

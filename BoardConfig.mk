@@ -103,7 +103,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_gauguin
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_gauguin
 TARGET_RECOVERY_DEVICE_MODULES := libinit_gauguin
 
 # Kernel
