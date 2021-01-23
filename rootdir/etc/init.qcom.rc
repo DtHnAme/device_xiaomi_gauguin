@@ -4,6 +4,9 @@ service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservic
     user system
     group system input wakelock
 
+service vendor.light-qti /system/bin/true
+    disabled
+
 service vendor.power /system/bin/true
     disabled
 
