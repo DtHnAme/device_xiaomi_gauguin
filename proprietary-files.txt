@@ -177,6 +177,9 @@ system_ext/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 system_ext/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
+# Soter
+-app/SoterService/SoterService.apk
+
 # Soundfx - from Nord-user 10 QKQ1.200412.002 2012212158 release-keys
 vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib/soundfx/libvolumelistener.so|a281e523ba36f363b7be9393db861331e1817b62
 vendor/lib64/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib64/soundfx/libvolumelistener.so|40672b3918f793b0d764f1958b6421d4e6f87f65
