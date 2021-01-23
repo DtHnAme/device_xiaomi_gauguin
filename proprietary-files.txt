@@ -275,6 +275,9 @@ system_ext/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 system_ext/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
+# Soter
+-app/SoterService/SoterService.apk
+
 # WFD
 -framework/WfdCommon.jar
 system_ext/bin/wfdservice
