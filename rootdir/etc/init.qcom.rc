@@ -4,6 +4,12 @@ service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservic
     user system
     group system input wakelock
 
+service vendor.power /system/bin/true
+    disabled
+
+service perf-hal-2-2 /system/bin/true
+    disabled
+
 on early-init
     chown root system /dev/hw_random
     chmod 0440 /dev/hw_random

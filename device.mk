@@ -224,7 +224,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/xiaomi
     
 # Telephony
 PRODUCT_PACKAGES += \

@@ -18,3 +18,4 @@ rild.libpath                        u:object_r:vendor_default_prop:s0
 
 persist.camera.                u:object_r:vendor_persist_camera_prop:s0
 vendor.camera.                 u:object_r:vendor_persist_camera_prop:s0
+vendor.powerhal.               u:object_r:vendor_power_prop:s0

@@ -13,9 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+cc_library_headers {
+    name: "xiaomi_power_headers",
+    vendor_available: true,
+    export_include_dirs: ["."],
+}
+
 cc_library {
-    name: "libdisppower",
-    proprietary: true,
+    name: "libdisppower-xiaomi",
     srcs: [
         "disp-power/InteractionHandler.cpp",
     ],
@@ -33,7 +38,6 @@ cc_binary {
     relative_install_path: "hw",
     init_rc: ["aidl/android.hardware.power-service.gauguin-libperfmgr.rc"],
     vintf_fragments: ["aidl/android.hardware.power-service.gauguin.xml"],
-    vendor: true,
     shared_libs: [
         "android.hardware.power-ndk_platform",
         "libbase",
@@ -41,7 +45,7 @@ cc_binary {
         "liblog",
         "libutils",
         "libbinder_ndk",
-        "libdisppower",
+        "libdisppower-xiaomi",
         "libperfmgr",
         "pixel-power-ext-ndk_platform",
     ],
@@ -49,9 +53,5 @@ cc_binary {
         "aidl/service.cpp",
         "aidl/Power.cpp",
         "aidl/PowerExt.cpp",
-    ],
-    header_libs: [
-        "libhardware_headers",
-        "generated_kernel_headers",
     ],
 }
