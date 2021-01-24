@@ -7,6 +7,7 @@ allow init vendor_overlay_file:dir mounton;
 
 # Allow init to write to sysfs
 allow init sysfs_battery_supply:file setattr;
+allow init sysfs_devices_system_cpu:file w_file_perms;
 allow init sysfs_dm:file setattr;
 allow init sysfs_graphics:file setattr;
 allow init sysfs_memory:file setattr;
