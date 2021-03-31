@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan \
     vendor.display.config@1.0
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
     
 # HIDL
 PRODUCT_PACKAGES += \
