@@ -20,13 +20,3 @@ PRODUCT_MODEL := Redmi Note9 Pro
 TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DISC="coral-user 11 RP1A.201005.004 6782484 release-keys" \
-    PRODUCT_DEVICE=gauguin \
-    PRODUCT_NAME=gauguin
-
-BUILD_FINGERPRINT := google/coral/coral:11/RP1A.201005.004/6782484:user/release-keys
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)

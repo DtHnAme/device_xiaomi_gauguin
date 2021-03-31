@@ -97,7 +97,9 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
 
-
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_gauguin
+TARGET_RECOVERY_DEVICE_MODULES := libinit_gauguin
     
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
