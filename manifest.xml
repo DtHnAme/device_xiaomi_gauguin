@@ -5,26 +5,6 @@
 -->
 <manifest version="2.0" type="framework">
     <hal format="hidl">
-        <name>vendor.lineage.biometrics.fingerprint.inscreen</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFingerprintInscreen</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFingerprintInscreen/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.lineage.powershare</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IPowerShare</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IPowerShare/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.radio.atcmdfwd</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

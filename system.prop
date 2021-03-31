@@ -30,7 +30,6 @@ ro.displayfeature.histogram.enable
 ro.hist.brightness.threshold=7 
 vendor.display.use_smooth_motion=1
 ro.vendor.dfps.enable=true
-persist.fod.modified.dc_status=false
 sys.displayfeature.hbm.enable=true
 
 # CNE
