@@ -8,10 +8,10 @@
 $(call inherit-product, device/xiaomi/gauguin/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
+$(call inherit-product, vendor/dot/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := fluid_gauguin
+PRODUCT_NAME := dot_gauguin
 PRODUCT_DEVICE := gauguin
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi

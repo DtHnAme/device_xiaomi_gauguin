@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2020 The fluidOS Project
+# Copyright (C) 2020 The dotOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/fluid_gauguin.mk
+    $(LOCAL_DIR)/dot_gauguin.mk
 
 COMMON_LUNCH_CHOICES := \
-    fluid_gauguin-user \
-    fluid_gauguin-userdebug \
-    fluid_gauguin-eng
+    dot_gauguin-user \
+    dot_gauguin-userdebug \
+    dot_gauguin-eng
