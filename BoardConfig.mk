@@ -45,36 +45,6 @@ TARGET_USES_64_BIT_BINDER := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := gauguin,gauguinpro.gauguininpro
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := lito
-TARGET_NO_BOOTLOADER := true
-
-# Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket reboot=panic_warm
-BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-TARGET_KERNEL_ARCH := arm64
-BOARD_KERNEL_IMAGE_NAME := Image
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_BOOT_HEADER_VERSION := 2
-BOARD_KERNEL_BASE          := 0x00000000
-BOARD_KERNEL_TAGS_OFFSET   := 0x00000100
-BOARD_KERNEL_OFFSET        := 0x00008000
-BOARD_KERNEL_SECOND_OFFSET := 0x00f00000
-BOARD_RAMDISK_OFFSET       := 0x01000000
-NEED_KERNEL_MODULE_SYSTEM := true
-#DTB/DTBO
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
-BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
-
-#-----------------------------------------------------#
-
-
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
@@ -88,6 +58,11 @@ BOARD_USES_GENERIC_AUDIO := true
 # Battery
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 HEALTHD_USE_BATTERY_INFO := true
+
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := lito
+TARGET_NO_BOOTLOADER := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
@@ -111,8 +86,6 @@ endif
 # Display
 TARGET_USES_HWC2 := true
 TARGET_HAS_HDR_DISPLAY := true
-#TARGET_PROVIDES_LIBLIGHT := false
-
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -126,6 +99,33 @@ BOARD_HAVE_QCOM_FM := true
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_gauguin
+TARGET_RECOVERY_DEVICE_MODULES := libinit_gauguin
+
+# Kernel
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket reboot=panic_warm
+BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
+TARGET_KERNEL_ARCH := arm64
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_BOOT_HEADER_VERSION := 2
+BOARD_KERNEL_BASE          := 0x00000000
+BOARD_KERNEL_TAGS_OFFSET   := 0x00000100
+BOARD_KERNEL_OFFSET        := 0x00008000
+BOARD_KERNEL_SECOND_OFFSET := 0x00f00000
+BOARD_RAMDISK_OFFSET       := 0x01000000
+NEED_KERNEL_MODULE_SYSTEM := true
+
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
+BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
+BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
+BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true

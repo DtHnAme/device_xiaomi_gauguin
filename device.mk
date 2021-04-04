@@ -30,12 +30,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_TARGET_VNDK_VERSION := 30
 
-# FIXME: master: compat for libprotobuf
-# See https://android-review.googlesource.com/c/platform/prebuilts/vndk/v28/+/1109518
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-vendorcompat 
-    
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
@@ -59,11 +53,6 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap
-    
-# Common init scripts
-PRODUCT_PACKAGES += \
-    init.qcom.rc \
-    init.recovery.qcom.rc 
     
 # Device-specific settings
 PRODUCT_PACKAGES += \
@@ -96,14 +85,15 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     libhidltransport \
     libhwbinder
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_gauguin
-TARGET_RECOVERY_DEVICE_MODULES := libinit_gauguin
     
-# HotwordEnrollement app permissions
+# HotwordEnrollement
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+
+# Init scripts
+PRODUCT_PACKAGES += \
+    init.qcom.rc \
+    init.recovery.qcom.rc 
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -114,7 +104,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/modules)
 
-#Light
+# Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl.lito
 
@@ -177,6 +167,7 @@ PRODUCT_SOONG_NAMESPACES += \
     
 # Telephony
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4 \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
@@ -184,11 +175,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml \
     telephony-ext
-
-    
-PRODUCT_PACKAGES += \
-	android.hardware.radio@1.4
-
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
