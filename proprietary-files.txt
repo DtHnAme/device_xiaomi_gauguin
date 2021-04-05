@@ -136,6 +136,10 @@ system_ext/etc/permissions/qti_telephony_hidl_wrapper.xml
 system_ext/etc/permissions/qti_telephony_utils.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 
+# QSEECOM - from coral-user 11 RQ1A.210105.003 7005429 release-keys
+vendor/lib/libspl.so:product/vendor_overlay/30/lib/libspl.so|7e3ab5ebb1786b6e272ae22aa37019dded979c49
+vendor/lib64/libspl.so:product/vendor_overlay/30/lib64/libspl.so|f24699732219695cc2d870b8ceeb267c7185300f
+
 # Radio
 -system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/datastatusnotification/datastatusnotification.apk
