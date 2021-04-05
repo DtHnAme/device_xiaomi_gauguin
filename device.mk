@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    libaudiohal \
     libaacwrapper \
     libfmq 
 
@@ -176,6 +177,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_HOST_PACKAGES += \
     signapk
     
+# Perf
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0 \
+    libtflite
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -233,10 +242,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0
-
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0
 
 # Trust HAL
 PRODUCT_PACKAGES += \
