@@ -136,6 +136,12 @@ system_ext/lib64/vendor.qti.gnss@2.1.so
 system_ext/lib64/vendor.qti.gnss@3.0.so
 system_ext/lib64/vendor.qti.gnss@4.0.so
 
+# Hotword Enrollment - from monet-user 11 RKQ1.200826.002 V12.1.1.0.RJIMIXM release-keys
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|89b2c917c0c35489f10306f1627b2cf7cf6b59cf
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|91c49e2f1f95fe76952eb55d7a936a997685b964
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e253e23b78e56fa8ea7b3a4b15edeb
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
+
 # Latency
 -system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
 -system_ext/framework/vendor.qti.latency-V2.0-java.jar
@@ -278,6 +284,10 @@ system_ext/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 system_ext/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.scve.panorama@1.0.so
+
+# Soundfx - from Nord-user 10 QKQ1.200412.002 2012212158 release-keys
+vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib/soundfx/libvolumelistener.so|a281e523ba36f363b7be9393db861331e1817b62
+vendor/lib64/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib64/soundfx/libvolumelistener.so|40672b3918f793b0d764f1958b6421d4e6f87f65
 
 # WFD
 -framework/WfdCommon.jar
