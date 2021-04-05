@@ -20,9 +20,3 @@ ro.charger.enable_suspend=true
 
 # Hax
 ro.control_privapp_permissions=log
-
-# Shutdown
-ro.build.shutdown_timeout=2
-
-# Smart fps switching
-ro.vendor.smart_dfps.enable=false
