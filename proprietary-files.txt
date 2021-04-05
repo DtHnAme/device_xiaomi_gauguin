@@ -132,8 +132,6 @@ system_ext/lib64/vendor.display.postproc@1.0.so
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
-system_ext/etc/permissions/qti_telephony_hidl_wrapper.xml
-system_ext/etc/permissions/qti_telephony_utils.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 
 # QSEECOM - from coral-user 11 RQ1A.210105.003 7005429 release-keys
