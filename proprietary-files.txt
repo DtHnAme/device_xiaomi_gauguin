@@ -113,7 +113,6 @@ system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
 
 # Perf - from LA.QSSI.11.0.r1-08800-qssi.0
--system_ext/app/workloadclassifier/workloadclassifier.apk|4792716d069fe7f7b357a70ea2d6631b61ef6b5c
 system_ext/bin/perfservice|d42bf410f6e4824b22c12e79926485d67e6409df
 system_ext/bin/qspmsvc|67535ce45d286fba6fc3bd70ce0b5ff221b3bb71
 system_ext/etc/init/perfservice.rc|7d4732437d2204e06ea09db85f169fef693086e8
