@@ -106,11 +106,9 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a585
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib/libmmrtpdecoder.so
-system_ext/lib/libmmrtpencoder.so
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
 system_ext/lib64/libmmrtpdecoder.so
-system_ext/lib64/libmmrtpencoder.so
 
 # Perf - from LA.QSSI.11.0.r1-08800-qssi.0
 system_ext/bin/perfservice|d42bf410f6e4824b22c12e79926485d67e6409df
@@ -133,6 +131,7 @@ system_ext/lib/libqti-util_system.so|7af8e1b05641b8d48b8d40ee13eee7ff07674420
 system_ext/lib/libqti_workloadclassifiermodel.so|f87a792f4bfd4006d2db30fb3078ee918b283158
 system_ext/lib/libskewknob_system.so|20e9b2d42ec35a8ce9b42d77a8d08e72911db8e6
 system_ext/lib/libsmomo.qti.so|bef2670fdc93bcc581b14d9b976f6e8b3ec94136
+system_ext/lib/libsmomoconfig.qti.so|6df5d5adc26d11fbed5f9e5ae28470d21d99cf04
 system_ext/lib/vendor.qti.hardware.iop@2.0.so|6e0a6f8b0e63e3b40021ea3f83cbc47fdf981b9a
 system_ext/lib/vendor.qti.hardware.perf@2.0.so|40c49b12c6e2f2563bc1379c08d7069c9643465f
 system_ext/lib/vendor.qti.hardware.perf@2.1.so|3af33e0810f8faacbd9a6b6d35f19e9a7d0dca61
@@ -152,6 +151,7 @@ system_ext/lib64/libqti-util_system.so|42ef8179601465f945d57445892e5419ecbc27ef
 system_ext/lib64/libqti_workloadclassifiermodel.so|08737b6ea15c7fe6215214f0749717210ee69d27
 system_ext/lib64/libskewknob_system.so|055ee24e7c67f1337a0a6628c20ac19be8643306
 system_ext/lib64/libsmomo.qti.so|166865c41fd4913abe7fbe6fd5dd3aac34298803
+system_ext/lib64/libsmomoconfig.qti.so|7dd1b27aaae9cf36031589babe79a35ff33a9841
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so|13712e933d6335f554dff9ccfbc6aecfebe20957
 system_ext/lib64/vendor.qti.hardware.perf@2.0.so|55478d107bd7c6defe6eb13be1bf88fae5df1931
 system_ext/lib64/vendor.qti.hardware.perf@2.1.so|f9edea496cc43526614a2a2a93f93c15795f7833
@@ -402,6 +402,7 @@ system_ext/lib64/libembmsmmosal.so|cc4a169473ec37de2696c7700481e38b4f46cdb4
 system_ext/lib64/libembmsmmparser_lite.so|eaa57e7c63d25b78e68132459fdfd598e7b73434
 system_ext/lib64/libembmssqlite.so|5d5bf58fdebe26c30011077ebad1986620019b66
 system_ext/lib64/libembmstinyxml.so|08eee57d42821158a04f37f41f6ab956993e0de9
+system_ext/lib64/libmwqemiptablemgr.so|9a55f6fbf1b1b997a4e60c4df3c4f73833e7ce47
 system_ext/lib64/libimscamera_jni.so|e1f3415ef21497f5bb551b846e7f92297bdd3156
 system_ext/lib64/libimsmedia_jni.so|ad16488a887c84de26d73e3eb529865b3f6ff4ee
 system_ext/lib64/lib-imsvideocodec.so|99aae5a22dbaa4a2a78703be9cecd1349f3dcb44
