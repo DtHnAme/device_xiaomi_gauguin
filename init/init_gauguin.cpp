@@ -108,28 +108,32 @@ void vendor_load_properties() {
     std::string device;
     std::string fingerprint;
     std::string description;
+    std::string marketname;
     std::string mod_device;
 
     if (region == "GLOBAL") {
-        model = "Mi 10T Lite";
+        model = "M2007J17G";
         device = "gauguin";
         fingerprint =
                 "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
         description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
+        marketname = "Mi 10T Lite";
         mod_device = "M2007J17G";
     } else if (region == "CN") {
-        model = "Redmi Note 9 Pro";
+        model = "M2007J17C";
         device = "gauguinpro";
         fingerprint =
                 "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
         description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
+        marketname = "Redmi Note 9 Pro";
         mod_device = "M2007J17C";
     } else if (region == "INDIA") {
-        model = "Mi 10i";
+        model = "M2007J17I";
         device = "gauguininpro";
         fingerprint =
                 "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
         description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
+        marketname = "Mi 10i";
         mod_device = "M2007J17I	";
     }
     // Workaround SafetyNet
@@ -139,6 +143,7 @@ void vendor_load_properties() {
     set_ro_build_prop("fingerprint", fingerprint);
     set_ro_product_prop("device", device);
     set_ro_product_prop("model", model);
+    set_ro_product_prop("marketname", marketname);
     property_override("ro.build.description", description.c_str());
     if (mod_device != "") {
         property_override("ro.product.mod_device", mod_device.c_str());
