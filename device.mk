@@ -144,6 +144,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/modules)
 
+# Media
+PRODUCT_PACKAGES += \
+    libmediaplayerservice
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl.lito
