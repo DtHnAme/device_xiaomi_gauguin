@@ -114,22 +114,22 @@ void vendor_load_properties() {
         model = "Mi 10T Lite";
         device = "gauguin";
         fingerprint =
-                "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
-        description = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
+                "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
+        description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
         mod_device = "M2007J17G";
     } else if (region == "CN") {
         model = "Redmi Note 9 Pro";
         device = "gauguinpro";
         fingerprint =
-                "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
-        description = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
+                "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
+        description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
         mod_device = "M2007J17C";
     } else if (region == "INDIA") {
         model = "Mi 10i";
         device = "gauguininpro";
         fingerprint =
-                "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
-        description = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
+                "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
+        description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
         mod_device = "M2007J17I	";
     }
     // Workaround SafetyNet
