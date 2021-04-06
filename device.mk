@@ -153,10 +153,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libmediaplayerservice
 
-# Light
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl.lito
-
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
@@ -175,7 +171,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-dot
     
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
