@@ -115,24 +115,24 @@ void vendor_load_properties() {
         model = "M2007J17G";
         device = "gauguin";
         fingerprint =
-                "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
-        description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
+                "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys";
+        description = "redfin-user 11 RQ2A.210405.005 7181113 release-keys";
         marketname = "Mi 10T Lite";
         mod_device = "M2007J17G";
     } else if (region == "CN") {
         model = "M2007J17C";
         device = "gauguinpro";
         fingerprint =
-                "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
-        description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
+                "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys";
+        description = "redfin-user 11 RQ2A.210405.005 7181113 release-keys";
         marketname = "Redmi Note 9 Pro";
         mod_device = "M2007J17C";
     } else if (region == "INDIA") {
         model = "M2007J17I";
         device = "gauguininpro";
         fingerprint =
-                "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys";
-        description = "redfin-user 11 RQ2A.210305.006 7119741 release-keys";
+                "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys";
+        description = "redfin-user 11 RQ2A.210405.005 7181113 release-keys";
         marketname = "Mi 10i";
         mod_device = "M2007J17I	";
     }
