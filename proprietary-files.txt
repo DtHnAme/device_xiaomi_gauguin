@@ -160,6 +160,9 @@ system_ext/lib64/vendor.display.postproc@1.0.so
 vendor/lib/libspl.so:product/vendor_overlay/30/lib/libspl.so|7e3ab5ebb1786b6e272ae22aa37019dded979c49
 vendor/lib64/libspl.so:product/vendor_overlay/30/lib64/libspl.so|f24699732219695cc2d870b8ceeb267c7185300f
 
+# Power-off charging daemon
+bin/charger
+
 # SCVE
 system_ext/lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
 system_ext/lib/vendor.qti.hardware.scve.objecttracker@1.0.so
