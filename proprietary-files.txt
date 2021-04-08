@@ -179,6 +179,9 @@ system/etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b
 -system/framework/QPerformance.jar|fa9463eec3a5a10641757de11478082365b4e018
 -system/framework/UxPerformance.jar|8a5351cc4d07fcfccab052b1b5de4a790ed4326c
 
+# Power-off charging daemon
+bin/charger
+
 # QMI
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 system_ext/etc/permissions/qti_libpermissions.xml
