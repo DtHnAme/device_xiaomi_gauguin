@@ -32,7 +32,6 @@ $(call inherit-product, vendor/xiaomi/gauguin/gauguin-vendor.mk)
 # Data Services
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
-PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_TARGET_VNDK_VERSION := 30
 
