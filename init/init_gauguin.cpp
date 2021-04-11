@@ -108,6 +108,7 @@ void vendor_load_properties() {
     std::string device;
     std::string fingerprint;
     std::string description;
+    std::string brand;
     std::string marketname;
     std::string mod_device;
 
@@ -117,6 +118,7 @@ void vendor_load_properties() {
         fingerprint =
                 "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys";
         description = "redfin-user 11 RQ2A.210405.005 7181113 release-keys";
+        brand = "Xiaomi";
         marketname = "Mi 10T Lite";
         mod_device = "M2007J17G";
     } else if (region == "CN") {
@@ -125,6 +127,7 @@ void vendor_load_properties() {
         fingerprint =
                 "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys";
         description = "redfin-user 11 RQ2A.210405.005 7181113 release-keys";
+        brand = "Redmi";
         marketname = "Redmi Note 9 Pro";
         mod_device = "M2007J17C";
     } else if (region == "INDIA") {
@@ -133,6 +136,7 @@ void vendor_load_properties() {
         fingerprint =
                 "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys";
         description = "redfin-user 11 RQ2A.210405.005 7181113 release-keys";
+        brand = "Xiaomi";
         marketname = "Mi 10i";
         mod_device = "M2007J17I	";
     }
@@ -141,9 +145,10 @@ void vendor_load_properties() {
     
     
     set_ro_build_prop("fingerprint", fingerprint);
+    set_ro_build_prop("marketname", marketname);
+    set_ro_build_prop("brand", brand);
     set_ro_product_prop("device", device);
     set_ro_product_prop("model", model);
-    set_ro_product_prop("marketname", marketname);
     property_override("ro.build.description", description.c_str());
     if (mod_device != "") {
         property_override("ro.product.mod_device", mod_device.c_str());
