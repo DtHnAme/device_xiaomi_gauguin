@@ -198,10 +198,10 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_SYSTEM)/etc/powerhint.json
+    $(LOCAL_PATH)/configs/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_SYSTEM)/etc/powerhint.json
 
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.gauguin-libperfmgr
+    android.hardware.power@1.3-service.xiaomi-libperfmgr
 
 # QTI VNDK Framework Detect
 PRODUCT_PACKAGES += \
@@ -224,8 +224,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel \
+    hardware/xiaomi
     
 # Telephony
 PRODUCT_PACKAGES += \
