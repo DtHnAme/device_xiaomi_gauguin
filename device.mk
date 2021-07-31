@@ -82,3 +82,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libqdMetaData \
+    libqdMetaData.system \
+    libnl
