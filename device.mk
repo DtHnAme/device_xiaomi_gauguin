@@ -20,6 +20,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/gauguin/cepheus-vendor.mk)
 
+# Init scripts
+PRODUCT_PACKAGES += \
+    init.qcom.rc \
+    init.recovery.qcom.rc 
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
