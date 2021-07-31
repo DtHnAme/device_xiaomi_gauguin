@@ -1,12 +1,54 @@
-# Av
-system_ext/lib/libmmosal.so
-system_ext/lib/libmmparser_lite.so
-system_ext/lib/libmmrtpdecoder.so
-system_ext/lib/libmmrtpencoder.so
-system_ext/lib64/libmmosal.so
-system_ext/lib64/libmmparser_lite.so
-system_ext/lib64/libmmrtpdecoder.so
-system_ext/lib64/libmmrtpencoder.so
+# ADSP Modules
+system_ext/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
+system_ext/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
+system_ext/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
+system_ext/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
+system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8150.so
+system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8250.so
+system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8350.so
+
+# AV - from LA.QSSI.11.0.r1-09900-qssi.0
+system_ext/lib/extractors/libmmparserextractor.so|63f16bdce8088dc620f5de506c170ae2296e30ed
+system_ext/lib/libavenhancements.so|d044743eee1184a3400fad8e43dc3a1693cffb03
+system_ext/lib/libmmosal.so|175c890c965a14043777000cd2cfc20264b04810
+system_ext/lib/libmmparser_lite.so|078224d83480b7f69eb30e0d036e24fa3fb0e37a
+-system_ext/lib/libqct_resampler.so|4186d11e0c418e7366422802635be68e21b9fca6
+system_ext/lib64/extractors/libmmparserextractor.so|ac4d39680610b6c1089d5b7b452ec0fa0c1986e0
+system_ext/lib64/libavenhancements.so|9445663f482dcc1265fc459d444732d94364097e
+system_ext/lib64/libmmosal.so|378098a961e465b5d14a29f5bc2320e10c88580c
+system_ext/lib64/libmmparser_lite.so|df8e602ebc12d150b2748c43ff0977fff4d25fd3
+
+# Alarm
+-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
+
+# Audio - from LA.QSSI.11.0.r1-010400-qssi.0
+system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
+-system_ext/framework/audiosphere.jar|9c28317f12b93a6d881c80a991ff24716fce4a12
+-system_ext/framework/vendor.qti.voiceprint-V1.0-java.jar|ebe2a70d176c6c23635c539feb528cf8fc93ad00
+system_ext/lib/libbinauralrenderer_wrapper.qti.so|bfd9efd7c8151b40fbb8ab2a1a193649254e8d28
+system_ext/lib/libhoaeffects_csim.so|f4c63bde973d625565131535e9b5471d74282e69
+system_ext/lib/libhoaeffects.qti.so|d3993bc80ccb5f4898c915be40cbc1e26b66455a
+system_ext/lib/liblistenjni.qti.so|53956a3686387e04ca328725c2cd3f42afd758bc
+system_ext/lib/liblistensoundmodel2.qti.so|afb9ec03aae8a01b6d3a2355ab3809a5dd338962
+system_ext/lib/libvr_amb_engine.so|b0df107f8ada261e7a5963292beb2ffe0364b588
+system_ext/lib/libvr_object_engine.so|fe2ad488354ab5428cf82ce3a5ad59a8c6deb015
+system_ext/lib/libvr_sam_wrapper.so|b73920c4b20b37d9f36bcf58d2ac5e6fe25f9225
+-system_ext/lib/libvraudio.so|0f8abf2b9bea29972279997df2b99c79832fe198
+system_ext/lib/libvraudio_client.qti.so|599e1e956b32d361cd3d20a10bc4f78f775fd239
+system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so|59a3c89fc283664c63d72685421cb12da8cabbb8
+system_ext/lib/vendor.qti.voiceprint@1.0.so|6aa0e20f595ea41bdf576263ba138b3d3b176ed0
+system_ext/lib64/libbinauralrenderer_wrapper.qti.so|518a78cfff8a7c81aaa8c0b5e774808baee67c43
+system_ext/lib64/libhoaeffects_csim.so|393bcf69e0829db289ead407187c5c55685e8567
+system_ext/lib64/libhoaeffects.qti.so|678132d6f0ec095b25884c095fb118122a14d08f
+system_ext/lib64/liblistenjni.qti.so|0e451661de61d86b1a3a940012e315025f870569
+system_ext/lib64/liblistensoundmodel2.qti.so|baa6311f1f96baf57cc40233615e1770de9b556a
+system_ext/lib64/libvr_amb_engine.so|2e95a4584d9267a0d2e180df3cbdda734ec74fcc
+system_ext/lib64/libvr_object_engine.so|f8a10b8263d524e552c50151c0a8934978ecb040
+system_ext/lib64/libvr_sam_wrapper.so|1d944ad141cf82f5770300fa13498e716de116f8
+-system_ext/lib64/libvraudio.so|56288c5c1c441125310ce8fd8d2f9441f1324a21
+system_ext/lib64/libvraudio_client.qti.so|a523ab8c54e76279ad32c7c89e67f85ff76b94de
+system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so|74ceb53e753f816cf05a25dce69d93c67eb471fe
+system_ext/lib64/vendor.qti.voiceprint@1.0.so|1677d7e6765fd6484b91dc6b66afa9f11ee0a2ef
 
 # Display
 product/etc/permissions/com.qti.snapdragon.sdk.display.xml
