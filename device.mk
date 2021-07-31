@@ -29,6 +29,15 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc 
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay 
+    
+# Overlays - override vendor ones
+PRODUCT_PACKAGES += \
+    WifiResCommon \
+    FrameworksResTarget 
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
