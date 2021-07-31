@@ -88,3 +88,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libnl
+
+# WiFi Tethering
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0
