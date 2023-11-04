@@ -69,6 +69,19 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.kpi_optimize.enable=false \
+    vendor.audio.feature.dynamic_ecns.enable=false \
+    vendor.audio.feature.fm.enable=false \
+    vendor.audio.feature.spkr_prot.enable=false
+
+PRODUCT_ODM_PROPERTIES += \
+    aaudio.mmap_policy=1 \
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    vendor.audio.adm.buffering.ms=6 \
+    vendor.audio.hal.output.suspend.supported=false \
+    vendor.audio.offload.track.enable=false
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
