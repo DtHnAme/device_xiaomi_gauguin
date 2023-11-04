@@ -52,9 +52,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/gauguin
 TARGET_KERNEL_CONFIG := gauguin_defconfig
 TARGET_KERNEL_LLVM_BINUTILS := true
 
-# Platform
-TARGET_BOARD_PLATFORM := lito
-
 # Display
 TARGET_NO_RAW10_CUSTOM_FORMAT := true
 TARGET_SCREEN_DENSITY := 440
