@@ -60,8 +60,10 @@ vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 
 # Audio
+vendor/bin/audioflacapp
 vendor/lib/hw/audio.primary.lito.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
+vendor/lib/liba2dpoffload.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
@@ -73,6 +75,9 @@ vendor/lib/libresampler.so
 vendor/lib/libssrec.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib/vndk/libxlog.so
+vendor/lib64/hw/audio.primary.lito.so
+vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
 
 # Audio Firmware
 vendor/firmware/RCV-cs35l41-dsp1-spk-cali.bin
@@ -109,18 +114,30 @@ vendor/lib/soundfx/libshoebox.so
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib/libbt-hidlclient.so
+vendor/lib/libbtnv.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 
 # Bluetooth (A2DP)
 vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib64/btaudio_offload_if.so
+vendor/lib64/libbluetooth_audio_session_qti.so
 
 # CACert
 vendor/app/CACertService/CACertService.apk
