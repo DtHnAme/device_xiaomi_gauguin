@@ -46,6 +46,7 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 TARGET_BOARD_PLATFORM := lito
 
 TARGET_COMMON_QTI_COMPONENTS += \
+    adreno \
     alarm \
     init \
     perf \
