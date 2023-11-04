@@ -49,6 +49,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     adreno \
     alarm \
     audio \
+    av \
     init \
     perf \
     telephony \
@@ -241,10 +242,6 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
 # Media
-PRODUCT_PACKAGES += \
-    libavservices_minijail \
-    libavservices_minijail.vendor
-
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
