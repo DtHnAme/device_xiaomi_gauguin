@@ -48,6 +48,7 @@ TARGET_BOARD_PLATFORM := lito
 TARGET_COMMON_QTI_COMPONENTS += \
     init \
     perf \
+    telephony \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -136,9 +137,6 @@ PRODUCT_COPY_FILES += \
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
-
-# Data Services
-$(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
@@ -262,11 +260,6 @@ $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
 PRODUCT_PACKAGES += \
     IFAAService
 
-# IPACM
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
-
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -310,10 +303,6 @@ PRODUCT_COPY_FILES += \
 # Native Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# Net
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
 
 # Neural Networks
 PRODUCT_PACKAGES += \
@@ -369,10 +358,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
-# QMI
-PRODUCT_PACKAGES += \
-    libjson
-
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
@@ -415,33 +400,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
-
-# Telephony
-PRODUCT_PACKAGES += \
-    extphonelib \
-    extphonelib-product \
-    extphonelib.xml \
-    extphonelib_product.xml \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-hidl-wrapper-prd \
-    qti_telephony_hidl_wrapper_prd.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    qti-telephony-utils-prd \
-    qti_telephony_utils_prd.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
 
 # Touchscreen
 PRODUCT_PACKAGES += \
