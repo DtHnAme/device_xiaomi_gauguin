@@ -59,6 +59,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     telephony \
     usb \
     wlan \
+    charging \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -119,11 +120,6 @@ PRODUCT_PACKAGES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
