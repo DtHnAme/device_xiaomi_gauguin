@@ -50,6 +50,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     alarm \
     audio \
     av \
+    bt \
     init \
     perf \
     telephony \
@@ -57,25 +58,9 @@ TARGET_COMMON_QTI_COMPONENTS += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# ANT+
-PRODUCT_PACKAGES += \
-    com.dsi.ant@1.0.vendor
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.audio-impl \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
 
 # Camera
 PRODUCT_PACKAGES += \
