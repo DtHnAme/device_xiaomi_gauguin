@@ -42,6 +42,12 @@ TARGET_SCREEN_WIDTH := 1080
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Platform
+TARGET_BOARD_PLATFORM := lito
+
+TARGET_COMMON_QTI_COMPONENTS += \
+    init \
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -250,9 +256,6 @@ $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/*.rc),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/$(notdir $f)))
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/bin/$(notdir $f)))
-
-PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc
 
 # IFAA
 PRODUCT_PACKAGES += \
