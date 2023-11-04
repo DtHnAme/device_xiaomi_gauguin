@@ -18,11 +18,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    GauguinCarrierConfigOverlay \
     GauguinFrameworksOverlay \
     GauguinSettingsOverlay \
     GauguinSystemUIOverlay \
-    GauguinTelephonyOverlay \
     GauguinWifiOverlay \
     SettingsOverlayM2007J17C \
     SettingsOverlayM2007J17G \
@@ -56,6 +54,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     init \
     media \
     nfc \
+    overlay \
     perf \
     telephony \
 
