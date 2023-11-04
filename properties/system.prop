@@ -26,6 +26,10 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=0
 persist.dbg.wfc_avail_ovr=1
 
+# IOP
+vendor.iop.enable_prefetch_ofr=1
+vendor.iop.enable_uxe=1
+
 # Media
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
