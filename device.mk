@@ -60,6 +60,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     usb \
     wlan \
     charging \
+    dsprpcd \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
